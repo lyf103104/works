@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta charset="UTF-8" />
+	<title>日产逍客</title>
+	<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="content module_1">
+	<div class="main showmain " >  
+		<div class="waterfall_content">
+			<div class="show">
+				<div class="waterfall_container" id="waterfall_container">
+			
+				</div>
+				<div class="waterfall_loading">正在加载...</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/jquery-1.11.3.min.js" ></script>
+	<script src="js/waterfall.js" ></script>
+	<script src="js/iframe.js" ></script>
+	<script>
+		$(function() {loadData()});
+		
+		var _isdataNull = false;
+
+		// 加载瀑布流
+		function loadData() {
+			//初次执行，默认拉取第一页数据
+			$('#waterfall_container').append(loadHtmlData(1));
+			$('#waterfall_container').waterfall({
+				auto_imgHeight: true,
+				getResource: function(pageIndex, render) {
+					return loadHtmlData(pageIndex);
+				}
+			});
+		}
+
+		// 拉取数据
+		var s=1;
+		function loadHtmlData(pageIndex) {
+			if (pageIndex >= 24) {
+				_isdataNull = true;
+				$('.waterfall_loading').html('没有数据!');
+				return "";
+			}
+
+			var _strHtml = '';
+			
+			for (var i = 0; i < 24; i++) {
+				var src = 'http://campaign.svw-volkswagen.com/lavida-promot2017/img/scene/' + s + '.gif';
+				var avatar = '';
+				s++;
+				if (i % 3 == 0) {
+					avatar = './images/avatar.jpg';
+				} else if (i % 3 == 1) {
+					avatar = './images/avatar_2.jpg';
+				} else if (i % 3 == 2) {
+					avatar = './images/avatar_3.jpg';
+				}
+
+				_strHtml += '<div class="base_area">' +
+								'<div class="pic_show">' +
+									'<img src="' + src + '" />' +
+								'</div>' +
+								'<div class="info oh">' +
+									'<div class="l_title fl">' +
+										'<img src="' + avatar + '" />' +
+										'<span>左手侧影</span>' +
+									'</div>' +
+									'<div class="r_title fr">' +
+										'<img class="pointer" src="./images/heart_n.png" data-flag="0" />' +
+										'<span>1723234</span>' +
+									'</div>' +
+								'</div>' +
+							'</div>';
+			}
+			return _strHtml;
+		}
+
+		$(window).on('scroll', function() {
+			if (!_isdataNull) $.onScroll();
+
+			// var scrollTop = $('.module_1').scrollTop();
+
+			// if (scrollTop != 0) {
+			// 	console.log(1);
+			// 	$('#uploader_box', window.parent.document).css('top', 0);
+			// } else {
+			// 	$('#uploader_box', window.parent.document).css('top', 15);
+			// }
+		});
+
+		var timer = setInterval(function() {
+			insertUploadImg();
+		}, 100);
+
+		function insertUploadImg() {
+			var $el = $('#waterfall_container .item0');
+
+			if ($el.length > 0) {
+				$el.prepend('<div style="width: 225px;height:225px;;margin-top:5px;"></div>');
+				clearInterval(timer);
+			}
+		}
+		
+	</script>
+</body>
+</html>

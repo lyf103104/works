@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>杰士邦-SKYN-爱的传递</title>
+<link rel="stylesheet" type="text/css" href="css/jquery.mCustomCsrollbar.css">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body>
+<div class="wrapCon">
+    <img src="images/inside_bg.jpg" />
+    <div class="wrapBox">
+       <img src="images/share.png" class="share"  onclick="$(this).hide()"/>
+       <div class="main showMain">
+          <a href="javascript:;" class="insideRuleBtn" onClick="showRule()"><img src="images/rule_bg.png" /></a>
+          <h1 class="name">蝎子橙</h1>
+          <p class="pic otherPic"><img src="images/pic.png" /></p>  
+          <p class="otherBtn">
+              <a href="javascript:;"><img src="images/fohim.png" /><span>8888</span></a>
+              <a href="upload.html"><img src="images/accept.png" /></a>
+              <a href="index.html"><img src="images/challenge.png" /></a>
+          </p>
+          <div class="pinglunCon">
+             <p><span>蝎子橙</span>：爱我你就摸摸我~</p>
+             <p><span>蝎子橙</span>：爱我你就摸摸我~</p>
+             <p><span>蝎子橙</span>：爱我你就摸摸我~</p>
+             <p><span>蝎子橙</span>：爱我你就摸摸我~</p>
+          </div>
+           <p class="pinglun"><input type="text" value="填写评论(1-15个汉字)" maxlength="15" onblur="if(this.value==''){this.value='填写评论(1-15个汉字)'}" onfocus="if(this.value=='填写评论(1-15个汉字)'){this.value=''}" onkeyup="value=value.replace(/[^\u4E00-\u9FA5\s]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\u4E00-\u9FA5\s]/g,''))" /><a href="javascript:;" onclick="addPinglun()"></a></p>
+       </div>
+    </div>
+    <div class="rulebg"><img src="images/rule_bg01.jpg"><img src="images/rule_bg02.jpg"></div>
+     <div class="rule">
+           <h1><img src="images/rule_tit.png"></h1>
+           <div class="ruleCon">
+               <p>“爱我你就抱抱我
+               <br />爱我你就亲亲我
+               <br />爱我你就摸摸我<br />
+               <br />世界上最珍贵的是爱人的拥抱、亲吻和抚摸！
+               <br />"SKYN极肤爱的传递"活动开始了！
+               <br />上传你的亲亲抱抱摸摸照片
+               <br />并在朋友圈发起挑战！
+               <br />看谁收集的爱最多！<br />
+               <br />我们将从中评选5名最佳照片，例如：
+               <br />“最有feel拥抱/ 亲亲/摸摸”、
+               <br />“最感动的、最刺激的、
+               <br />最有创意的、最高难度的、
+               <br />最意想不到的、最惊吓的……”
+               <br />送出浪漫情侣蜜月套餐旅游。<br />
+               <br />如果你的抱抱、亲亲、摸摸是在跳跃中完成
+               <br />那我们会选出10位
+               <br />最佳“跳跃式feel”
+               <br />并送出极限运动相机GOPRO 。<br />
+               <br />凡参与上传照片的网友
+               <br />都可以获得SKYN极肤试用装两片
+               <br />活动结束后统一邮寄。<br />
+               <br />快上传你的有爱照片，把爱传递下去吧！ ”
+               <br />活动时间：2015年11月30日~2016年1月9日
+               <br />奖励规则：活动期间每周都可以上传照片,
+               <br />再次获得SKYN试用装哦！（最多可获六次）
+               <br />温馨提示：请在微信端参与活动以获得更好体验。</p>
+           </div>
+           <a href="javascript:;" class="okBtn" onClick="closeRule()"><img src="images/okBtn.png"></a>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="js/common.js"></script> 
+  
+<script type="text/javascript">
+window.onload=function(){
+	htmlHight();
+	getplHight();
+	$(".pinglunCon").mCustomScrollbar();
+	$(".pinglunCon").mCustomScrollbar("update");
+}
+</script>
+</body>
+</html>

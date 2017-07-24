@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta charset="UTF-8" />
+	<title>日产逍客</title> <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+	<div class="xk_bc_one">
+		<div class="wrap">
+			<div class="fr user_bc">
+				<!--已登录状态-->
+				<div class="user">
+					<img class="avatar" src="./images/avatar.jpg" alt="用户头像">
+					<span class="username">左手侧影</span>
+					<span class="logout">【<a href="javascript:;">退出</a>】</span>
+				</div>
+				<!--未登录状态-->
+				<!-- <div class="user user2">
+					<p>您好，【<a href="javascript:;">请登录</a>】</p>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<div class="xk_top">
+		<div class="container">
+			<div class="video_wrap abs">
+				<div id="mod_player" class="video_box pointer">
+					<img src="./images/video_big.jpg">
+				</div>
+				<div id="j_scroll_list" class="scroll_pic">
+					<a title="左翻" href="javascript:;" class="btn_left">左翻</a>
+					<a title="右翻" href="javascript:;" class="btn_right">右翻</a>
+					<div class="pic_list">
+						<ul id="ScrollImgBox" class="clearfix">
+							<li class="active" data-vid="l00238gnuls"><a href="javascript:;"><img src="./images/scroll/video_1.jpg" /></a></li>
+							<li data-vid="z002378ziqn"><a href="javascript:;"><img src="./images/scroll/video_2.jpg" /></a></li>
+							<li data-vid="s0023uv8og9"><a href="javascript:;"><img src="./images/scroll/video_3.jpg" /></a></li>
+							<li data-vid="e00235g6a6w"><a href="javascript:;"><img src="./images/scroll/video_4.jpg" /></a></li>
+							<li data-vid="w0023vtjpoc"><a href="javascript:;"><img src="./images/scroll/video_5.jpg" /></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="xk_bc_three">
+		<div class="wrap">
+			<div class="qrcode abs">
+				<img src="./images/qrcode.jpg">
+			</div>
+		</div>
+	</div>
+	<div class="xk_center">
+		<div class="container">
+			<div class="wrap abs">
+				<div class="viewmore">
+				</div>
+				<div class="top oh">
+					<div class="nav fl">
+						<div class="item pointer fl item_1 active"></div>
+						<div class="item pointer fl item_2"></div>
+						<div class="item pointer fl item_3"></div>
+					</div>
+					<div class="input_wrap fr">
+						<div class="des">
+							输入QQ号，为喜欢的作品点赞
+						</div>
+						<input type="text" class="fl" maxlength="16">
+						<div class="icon fl"></div>
+					</div>
+				</div>
+				<div class="content">
+					<iframe id="moduleIframe" src="./module_1.html" frameborder="0" height="100%" width="100%"></iframe>
+					<div class="blank"></div>
+					<div id="uploader_box" class="uploader">
+						<img class="bc" src="./images/upload.png" />
+						<input type="file" id="up_img" class="file" accept="image/gif,image/jpeg,image/jpg,image/png" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="xk_btm">
+		<div class="container">
+			<div id="j_scroll_list2" class="scroll_box abs">
+				<a title="左翻" href="javascript:;" class="btn_left">左翻</a>
+				<a title="右翻" href="javascript:;" class="btn_right">右翻</a>
+				<div class="pic_list">
+					<ul id="ScrollImgBox2" class="clearfix">
+						<li><a href="javascript:;"><img src="./images/scroll_1.jpg" /></a></li>
+						<li><a href="javascript:;"><img src="./images/scroll_2.jpg" /></a></li>
+						<li><a href="javascript:;"><img src="./images/scroll_3.jpg" /></a></li>
+						<li><a href="javascript:;"><img src="./images/scroll_4.jpg" /></a></li>
+						<li><a href="javascript:;"><img src="./images/scroll_5.jpg" /></a></li>
+						<li><a href="javascript:;"><img src="./images/scroll_6.jpg" /></a></li>
+						<li><a href="javascript:;"><img src="./images/scroll_7.jpg" /></a></li>
+						<li><a href="javascript:;"><img src="./images/scroll_8.jpg" /></a></li>
+						<li><a href="javascript:;"><img src="./images/scroll_9.jpg" /></a></li>
+						<li><a href="javascript:;"><img src="./images/scroll_10.jpg" /></a></li>
+						<li><a href="javascript:;"><img src="./images/scroll_11.jpg" /></a></li>
+					</ul>
+				</div>
+			</div>
+			<a href="http://www.dongfeng-nissan.com.cn/car/qashqai" target="_blank" class="btn_des abs">
+				<img class="first" src="./images/btn_des.png">
+				<img class="last" src="./images/btn_des_hover.png">
+			</a>
+			<div class="form_wrap abs">
+				<div class="form form_div">
+					<form action="">
+						<div class="row input_wrap">
+							<div class="fl module">
+								<label class="label_name">姓　　　　名</label>
+								<input type="text" vaule="" id="username">
+							</div>
+							<div class="fr text-right module">
+								<label>电　　　　话</label>
+								<input type="text" value="" id="phone" maxlength="11">
+							</div>
+						</div>
+						<div class="row_div">
+							<div class="row fl">
+								<span class="title">省　　　　份</span>
+								<div class="clearfix enter">
+									<div class="enter fakeselect">
+										<p class="choice">请选择</p>
+										<ul id="yy_province" class="options"></ul>
+									</div>
+									<input type="hidden" name="" value="" id="j_pro" autocomplete="off" />
+								</div>
+							</div>
+							<div class="row fr">
+								<span class="title">城　　　　市</span>
+								<div class="clearfix enter">
+									<div class="enter fakeselect">
+										<p class="choice">请选择</p>
+										<ul id="yy_city" class="options"></ul>
+									</div>
+									<input type="hidden" name="" value="" id="j_city" autocomplete="off" />
+								</div>
+							</div>
+						</div>
+						<div class="row_item row">
+							<span class="title">专<span style="margin: 0 24px;">营</span>店</span>
+							<div class="enter" style="margin-bottom: 10px;">
+								<div class="enter enter_shop fakeselect">
+									<p class="choice time_choice">请选择</p>
+									<ul id="yy_address" class="options time_options"></ul>
+								</div>
+								<input type="hidden" name="" value="" id="series" autocomplete="off" />
+							</div>
+						</div>
+						<div class="row_item row">
+							<span class="title">计划购车时间</span>
+							<div class="enter">
+								<div class="enter enter_shop fakeselect">
+									<p class="choice time_choice">请选择</p>
+									<ul class="options time_options">
+										<li>
+											<a href="javascript:;">一个月</a>
+										</li>
+										<li>
+											<a href="javascript:;">二个月</a>
+										</li>
+										<li>
+											<a href="javascript:;">三个月</a>
+										</li>
+									</ul>
+								</div>
+								<input type="hidden" name="" value="" id="j_time" autocomplete="off" />
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="selected" data-type="1"></div>
+				<a class="btn_submit abs" href="javascript:;">
+					<img class="first" src="./images/btn_submit.png">
+					<img class="last" src="./images/btn_submit_hover.png">
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- 上传预览 -->
+	<div id="layer_preview" class="layer layer_preview">
+		<a href="javascript:;" class="closePop"></a>
+
+		<div id="imgdiv" class="preview_box">
+			<img id="imgShow0" class="ingShow" src="">
+		</div>
+
+		<div class="tips">注：图片大小不超过2M</div>
+
+		<div class="agree_box" data-type="1">
+			<div class="fl"></div>
+			<a href="javascript:;" class="fr"></a>
+		</div>
+		<div class="btns oh">
+			<div id="re_upload" class="fl btn reset">
+				<input type="file" id="reset_file" accept="image/gif,image/jpeg,image/jpg,image/png">
+			</div>
+			<div class="fr btn submit"></div>
+		</div>
+	</div>
+	<!-- 上传成功 -->
+	<div class="upload_sucs">
+		<a href="javascript:;" class="closePop"></a>
+		<img src="./images/uploader/success_1.png">
+		<div class="toggle" data-click="0">
+			<img src="./images/uploader/arr1.png" class="abs arr_1">
+			<img src="./images/uploader/arr2.png" class="abs arr_2 hide">
+		</div>
+		<div class="formbox">
+			<div class="group">
+				<div class="fl txt">
+					姓名：
+				</div>
+				<div class="fl input_div">
+					<input type="text" id="un2" maxlength="6">
+				</div>
+			</div>
+			<div class="group group2">
+				<div class="fl txt">
+					电话：
+				</div>
+				<div class="fl input_div">
+					<input type="text" id="phone2" maxlength="11">
+				</div>
+			</div>
+			<div class="group">
+				<div class="fl txt">
+					地址：
+				</div>
+				<div class="fl input_div addrs_div">
+					<span class="abs">请输入您的详细收货地址哦，以免收不到礼品</span>
+					<input type="text" id="addrs" maxlength="100">
+				</div>
+			</div>
+			<div class="info_submit"></div>
+		</div>
+	</div>
+	<!-- 预约成功 -->
+	<div id="yu_success" class="yu_success">
+		<a href="javascript:;" class="closePop"></a>
+		<img src="./images/submit_bc.jpg">
+	</div>
+	<!-- 查看更多弹层 -->
+	<div id="viewmore_layer" class="viewmore_layer">
+		<a href="javascript:;" class="closePop2"></a>
+		<div id="scrollbar1" class="scrollbar1">
+			<div class="scrollbar">
+				<div class="track">
+					<div class="thumb"><div class="end"></div></div>
+				</div>
+			</div>
+			<div class="viewport">
+				<div class="overview">
+					<img src="./images/hd_des.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="viewmore_layer2" class="viewmore_layer">
+		<a href="javascript:;" class="closePop2"></a>
+		<div id="scrollbar2" class="scrollbar1">
+			<div class="scrollbar">
+				<div class="track">
+					<div class="thumb"><div class="end"></div></div>
+				</div>
+			</div>
+			<div class="viewport">
+				<div class="overview">
+					<img src="./images/hd_des.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-1.11.3.min.js" ></script>
+	<script src="./js/jquery.tinyscrollbar.min.js"></script>
+	<script src="js/uploadPreview.js" ></script>
+	<script src="js/shop.js" ></script>
+	<script src="js/common.js" ></script>
+	<script type="text/javascript" src="js/app.video.player.v3.js"></script>
+	<script>
+		browserRedirect();
+		/*根据移动设备跳转到移动页面wap/index.html*/
+		function browserRedirect() {
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+			var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+			var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+			var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+			var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+			var bIsAndroid = sUserAgent.match(/android/i) == "android";
+			var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+			var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+			if ((bIsIphoneOs || bIsIpad || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsCE || bIsWM) && window.location.href.indexOf("/wap/") < 0) {
+				var gotoURL = "pc/wap/";
+				if (location.href.indexOf('?') < 0) {
+					window.location.href = "http://192.168.1.142:8080/" + gotoURL + "index.html";
+				} else {
+					window.location.href = "http://192.168.1.142:8080/" + gotoURL + "index.html" + location.href.substr(location.href.indexOf('?'));
+				}
+			}
+		}
+	</script>
+</body>
+</html>

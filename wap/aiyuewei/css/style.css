@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+/****** Reset ******/
+section,article,aside,header,footer,nav,dialog,figure,legend{display:block;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,figure{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;empty-cells:show; table-layout:fixed;}
+table td{word-break:break-all;}
+caption,th{text-align:left;}
+ol,ul{list-style:none;}
+img{display:block;border:0;vertical-align:middle;max-width:100%;height:auto;width:auto\9;/* ie8 */}
+*:focus{outline:0;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;-webkit-box-sizing:border-box;box-sizing:border-box}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
+audio:not([controls]){display:none;}[hidden]{display:none;}
+
+/****** Typography ******/
+html,body{max-width:640px;height:100%;}
+html{font-size:100px;outline:0;}
+body{color:#000;background:#fff;-webkit-user-select:none;-webkit-text-size-adjust:none;position:relative;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+
+/*::-moz-placeholder { color: #00549c; }
+::-webkit-input-placeholder { color:#00549c; }
+:-ms-input-placeholder { color:#00549c; }*/
+
+/****** public ******/
+.relative{position: relative;}
+.abs{position: absolute;}
+.hide{display: none;}
+.fl{float: left;}
+.fr{float: right;}
+.oh{overflow: hidden;}
+
+/****** Start ******/
+.bg1
+{
+    height: 4.08rem;
+    background: url(../images/bg1.jpg);
+}
+.bg2
+{
+    height: 4.54rem;
+    background: url(../images/bg2.jpg);
+}
+.bg3
+{
+    height: 5.03rem;
+    background: url(../images/bg3.jpg);
+}
+.bg4
+{
+    height: 9.78rem;
+    background: url(../images/bg4.jpg);
+}
+.bg1,
+.bg2,
+.bg3,
+.bg4
+{
+    width: 6.4rem;
+    background-size: cover;
+}
+.arrowdown
+{
+    position: fixed;
+    z-index: 9999;
+    bottom: .3rem;
+    left: 50%;
+
+    display: none;
+
+    width: .57rem;
+    height: .35rem;
+    margin-left: -.28rem;
+
+    -webkit-animation: arrow 2s ease infinite;
+            animation: arrow 2s ease infinite;
+
+    background: url(../images/arrow.png);
+    background-size: cover;
+}
+@-webkit-keyframes arrow {
+    0% { opacity: 0; -webkit-transform: translateY(-10px);}
+    50% { opacity: 1; -webkit-transform: translateY(0px); }
+    100% { opacity: 0; -webkit-transform: translateY(10px);}
+}
+@keyframes arrow {
+    0% { opacity: 0; transform: translateY(-10px);}
+    50% { opacity: 1; transform: translateY(0px); }
+    100% { opacity: 0; transform: translateY(10px);}
+}
+
+.bg3 .video_wrap
+{
+    top: .43rem;
+    left: 50%;
+
+    width: 4.97rem;
+    height: 3.7rem;
+    margin-left: -2.48rem;
+}
+.bg3 .video_img
+{
+    top: 0;
+    left: 0;
+
+    width: 4.97rem;
+    height: 3.7rem;
+
+    background: url(../images/video_img.jpg);
+    background-size: cover;
+}
+.bg4 .search
+{
+    bottom: 3.11rem;
+    left: 50%;
+
+    width: 4.55rem;
+    height: 1.84rem;
+    margin-left: -2.27rem;
+
+    background: url(../images/qrcode.png);
+    background-size: cover;
+}
+.bg4 .qrcode
+{
+    width: 1.89rem;
+    height: 1.89rem;
+    left: 50%;
+    bottom: 1.02rem;
+    margin-left: -0.94rem;
+}
+.bg4 .hand
+{
+    right: 1.5rem;
+    bottom: 2.9rem;
+
+    width: .27rem;
+    height: .39rem;
+
+    background: url(../images/hand.png);
+    background-size: cover;
+}
+
+

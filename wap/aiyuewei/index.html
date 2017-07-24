@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta content="no-cache" http-equiv="Cache-Control" />
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>爱乐维-Trueview</title>
+	<link href="./css/style.css" rel="stylesheet">
+	<script>(function(doc,win){var docEl=doc.documentElement,resizeEvt='orientationchange'in window?'orientationchange':'resize',recalc=function(){var clientWidth=docEl.clientWidth;if(!clientWidth)return;docEl.style.fontSize=100*(clientWidth/640)+'px'};if(!doc.addEventListener)return;win.addEventListener(resizeEvt,recalc,false);doc.addEventListener('DOMContentLoaded',recalc,false)})(document,window);</script>
+</head>
+<body>
+	<div class="main">
+		<div class="bg1"></div>
+		<div class="bg2"></div>
+		<div class="bg3 relative">
+			<div class="video_wrap abs">
+				<div id="mod_player">
+					<div class="video_img abs"></div>
+				</div>
+			</div>
+		</div>
+		<div class="bg4 relative">
+			<a class="search abs" href="https://wqitem.jd.com/item/view?sku=3597603&price=218.00&fs=1&pos=2&csid=15c39287d21_9f46bb0a_3070b&ss_mtest=wx_baseline,&key=%E7%88%B1%E4%B9%90%E7%BB%B4"></a>
+			<div class="hand abs"></div>
+			<img class="qrcode abs" src="./images/qrcode2.png">
+		</div>
+		<div class="arrowdown"></div>
+	</div>
+
+	<script src="./js/jquery-1.11.3.min.js" ></script>
+	<script src="./js/tvp.js" ></script>
+	<script>
+		window.onload = function() {
+			setTimeout(initVideo, 2000);
+			function initVideo() {
+				var video = new tvp.VideoInfo();
+				video.setVid("i0023djjnuc");
+
+				var player = new tvp.Player();
+				player.create({
+					width: "4.97rem",
+					height: "3.7rem",
+					video: video,
+					modId: "mod_player",
+					autoplay: true,
+					plugins: {
+						AppRecommend: false
+					}
+				});
+			}
+
+			arrowDownFn();
+			function arrowDownFn() {
+				var n1 = $('.bg1').height() + $('.bg2').height();
+				var n2 = $(window).height();
+				if (n1 > n2) {
+					$('.arrowdown').show();
+					$(window).scroll(function() {
+						$('.arrowdown').hide();
+						$(this).off('scroll');
+					});
+				}
+			}
+		};
+	</script>
+</body>
+</html>

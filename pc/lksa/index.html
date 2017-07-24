@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>雷克萨斯</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<!-- nav -->
+	<div class="nav-container">
+		<div class="nav-wrap oh">
+			<img class="pull-left logo" src="./images/logo960.png" alt="logo">
+			<ul class="pull-right item-wrap">
+				<li class="pull-left text-center pointer item"><a class="active" href="#">首页</a></li>
+				<li class="pull-left text-center pointer item"><a href="#">车型介绍</a></li>
+				<li class="pull-left text-center pointer item"><a href="#">获奖名单</a></li>
+				<li class="pull-left text-center pointer item"><a href="#">官方网站</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- banner -->
+	<div class="banner-container"></div>
+	
+	<!-- 报名试驾 -->
+	<ul class="signup-container oh">
+		<li class="pull-left left-wrap">
+			<div>
+				<img class="prize960" src="./images/prize960.png" alt="prize">
+				<img class="prize760 hide" src="./images/prize760.png" alt="prize">
+				<img class="prize320 hide" src="./images/prize320.png" alt="prize">
+			</div>
+			<p>
+				1、<span class="red">线上报名试驾赢大奖</span>：凡在活动期间内，成功提交试驾报名信息的
+				用户将有机会获得<span class="red">iPhone 5</span>，<span class="red">雷克萨斯专属钥匙链</span>，<span class="red">QQ公仔</span>，您还在
+				等什么？快来报名吧！
+			</p>
+			<p>
+				2、<span class="red">线下挑战CT200h超低油耗记录得好礼</span>：<br/>
+				即日起，凡成功注册并参与完成CT200h试驾后：<br/>
+				百公里油耗4.0L-4.6L 可获得<span class="red">200元加油卡</span>。<br/>
+				百公里油耗&lt;4.0L 可获得<span class="red">400元加油卡</span>。<br/>
+				加油卡发放方式：经销店现场发放。<br/>
+			</p>
+			<p>
+				已有<span class="red">1111</span>人成功挑战了百公里油耗&lt;4.6L，最好成绩是百公里油耗<span class="red">1.1L</span>。
+			</p>
+		</li>
+		<li class="pull-right right-wrap">
+			<p class="tips">
+				* 您所填写的信息，将用于此次试驾申请及雷克萨斯汽车相关活动，且会被严格保密。
+			</p>
+			<div class="text-right div-from">
+				<form id="signForm" action="" method="">
+					<div class="form-group groups-1">
+						<label for="username">姓名：</label>
+						<input type="text" name="username">
+						<label for="phone" class="l-phone">手机：</label>
+						<input type="number" name="phone">
+					</div>
+					<div class="hide form-group groups-1-320">
+						<div>
+							<label for="username">姓名：</label>
+							<input type="text" name="username">
+						</div>
+						<div>
+							<label for="phone" class="l-phone">手机：</label>
+							<input type="number" name="phone">
+						</div>
+					</div>
+					<div class="form-group groups-2">
+						<label>可选经销商：</label>
+						<select name="region">
+							<option selected="selected" value="0">省份</option>
+							<option value="1">北京</option>
+							<option value="2">上海</option>
+							<option value="3">广州</option>
+							<option value="4">深证</option>
+							<option value="5">杭州</option>
+						</select>
+						<select class="cityed" name="cityed">
+							<option selected="" value="0">城市</option>
+							<option value="1">北京</option>
+							<option value="2">上海</option>
+							<option value="3">广州</option>
+							<option value="4">深证</option>
+							<option value="5">杭州</option>
+						</select>
+					</div>
+					<div class="hide groups-2-320">
+						<div>
+							<label>可选经销商：</label>
+							<select name="region">
+								<option selected="selected" value="0">省份</option>
+								<option value="1">北京</option>
+								<option value="2">上海</option>
+								<option value="3">广州</option>
+								<option value="4">深证</option>
+								<option value="5">杭州</option>
+							</select>
+						</div>
+						<div>
+							<select class="cityed" name="cityed">
+								<option selected="selected" value="0">城市</option>
+								<option value="1">北京</option>
+								<option value="2">上海</option>
+								<option value="3">广州</option>
+								<option value="4">深证</option>
+								<option value="5">杭州</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group groups-3">
+						<select name="dealers">
+							<option selected="selected" value="0">经销商名称</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</div>
+					<div class="form-group groups-4">
+						<label for="addres">经销商地址：</label>
+						<input type="text" name="addres">
+					</div>
+					<div  class="form-group groups-5">
+						<label>预计购车时间：</label>
+						<select name="buydate">
+							<option value="1">三个月内</option>
+							<option value="2">六个月内</option>
+							<option value="3">九个月内</option>
+						</select>
+					</div>
+					<ul class="btns text-center">
+						<li class="reset"></li>
+						<li class="submit" type="submit"></li>
+					</ul>
+				</form>
+			</div>
+			<p class="red">
+				注：活动结束后，各奖项将由官方从成功提交试驾报名信息的用户中抽取，获奖名单将在活动结束后一周内公布，请各位参与活动的网友及时关注。 
+			</p>
+		</li>
+	</ul>
+
+	<!-- GT200h限量版 -->
+	<div class="des-container">
+		<div class="bc"></div>
+		<p class="text">
+			不个性，不CT，雷克萨斯CT 200h限量版稀世发布，每款车型仅有500台！<br/>
+			是<span class="pink">花语花忆</span>最迷人，还是<span class="dark">暗夜骑士</span>更风靡？<br/>
+			参与竞猜活动，为你喜爱的车款投出一票，提交选择理由即有机会获得雷克萨斯运动帽一顶，活动共计50顶。<br/>
+		</p>
+		<img class="hat" src="./images/hat960.png">
+		<span class="red tips">
+			注：活动结束后，得票多的车款将会成为最受青睐车款，官方将从给其投票的用户中抽出50位中奖用户，获奖名单将在活动结束后一周内公布，请各位参与活动的网友及时关注。
+		</span>
+	</div>
+
+	<!-- 投票 -->
+	<div class="vote-container">
+		<div class="pull-left wrap left-wrap">
+			<div class="vote">
+				<span>111,111 票</span>
+			</div>
+			<div class="vote-320 hide">
+				<img src="./images/vote320-1.png">
+				<span>111,111 票</span>
+			</div>
+			<div class="left-options options">
+				<h5>选择<span class="pink">花语花忆</span>的理由：</h5>
+				<div class="groups">
+					<input type="checkbox" name="pink" id="option-1" value="1">
+					<label for="option-1">
+						采用施华洛世奇®元素的水晶车标，光芒璀璨
+					</label>
+				</div>
+				<div class="groups">
+					<input type="checkbox" name="pink" id="option-2" value="2">
+					<label for="option-2">
+						车身花语蔓延车贴纹样，描绘出动人的曲线美感
+					</label>
+				</div>
+				<div class="groups">
+					<input type="checkbox" name="pink" id="option-3" value="3">
+					<label for="option-3">
+						车尾L’amour金属标识，富有法兰西的浪漫气息
+					</label>
+				</div>
+				<div class="groups">
+					<input type="checkbox" name="pink" id="option-4" value="4">
+					<label for="option-4">
+						金属银色外后视镜与门把手，细节中更显质感
+					</label>
+				</div>
+				<div class="vote-btn pointer"></div>
+			</div>
+		</div>
+		<div class="pull-right wrap right-wrap">
+			<div class="vote">
+				<span>111,111 票</span>
+			</div>
+			<div class="vote-320 hide">
+				<img src="./images/vote320-2.png">
+				<span>111,111 票</span>
+			</div>
+			<div class="right-options options">
+				<h5>选择<span class="dark">暗夜骑士</span>的理由：</h5>
+				<div class="groups">
+					<input type="checkbox" id="option-5" name="dark" value="5">
+					<label for="option-5">
+						暗夜车顶和黑色外后视镜，让夜色更衬你
+					</label>
+				</div>
+				<div class="groups">
+					<input type="checkbox" id="option-6" name="dark" value="6">
+					<label for="option-6">
+						力量感十足的黑色车贴纹饰，仿佛摇滚乐手纹身一般
+					</label>
+				</div>
+				<div class="groups">
+					<input type="checkbox" id="option-7" name="dark" value="7">
+					<label for="option-7">
+						车尾Midnight金属标识，突显限量款型的特殊身份
+					</label>
+				</div>
+				<div class="groups">
+					<input type="checkbox" id="option-8" name="dark" value="8">
+					<label for="option-8">
+						轮毂熏黑贴纸，飞转起来更具锋芒
+					</label>
+				</div>
+				<div class="vote-btn pointer"></div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer text-center">
+		您所浏览的页面为腾讯公司广告客户在腾讯平台刊登之广告，所述产品非腾讯出品<br/>您默认同意您的昵称等信息可出现在腾讯公司域名下的产品中，以便您和好友一同分享活动信息。
+	</footer>
+
+	<script src="./js/jquery.min.js"></script>
+	<script>
+		(function(window, $) {
+			$('.signup-container .btns .submit').click(function() {
+				var username = $('#signForm input[name="username"]').val(),
+					phone    = $('#signForm input[name="phone"]').val(),
+					region   = $('#signForm select[name="region"]').val(),
+					cityed   = $('#signForm select[name="cityed"]').val(),
+					dealers  = $('#signForm select[name="dealers"]').val(),
+					addres   = $('#signForm input[name="addres"]').val(),
+					buydate  = $('#signForm select[name="buydate"]').val();
+
+				var arrs = [username, phone, region, cityed, dealers, addres, buydate];
+
+				for (var i = arrs.length - 1; i >= 0; i--) {
+					if (arrs[i] == '' || arrs[i] == '0') return alert('请填写正确的信息');
+				}
+
+				// $.ajax();
+			});
+
+			$('.signup-container .btns .reset').click(function() {
+				$('#signForm')[0].reset();
+			});
+
+			$('.vote-container .options .vote-btn').click(function() {
+				var count = 0;
+				var checkeds, output;
+
+				if ($(this).parent().hasClass('left-options')) {
+					checkeds = $('.vote-container .left-options :checkbox');
+					output   = '选择花语花忆的理由';
+				} else {
+					checkeds = $('.vote-container .right-options :checkbox');
+					output   = '选择黑暗骑士的理由';
+				}
+
+				$.each(checkeds, function(idx, item) {
+					if (item.checked == false) count++;
+					if (count === 4) alert(output);
+				});
+			});
+		})(window, jQuery);
+	</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no,email=no">
+	<title>别克品牌日直播</title>
+	<link rel="stylesheet" href="./css/public.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="main-container">
+		<div class="main-wrap oh">
+			<div class="video-box pull-left">
+				<div id="player"></div>
+			</div>
+			<div class="temp-box pull-left">
+
+				<div class="live-before temp">
+					<img src="./images/live-before.png">
+					<a href="#" class="btn" id="btn"></a>
+				</div>
+
+				<div class="living temp hide">
+					<!-- <h1 class="tit">别克品牌日</h1>
+					<div class="des">美好的一切，门后见</div>
+					<div class="des">
+						直播中，见证你的生活和出行&nbsp;&nbsp;从好&nbsp;&nbsp;到美好
+					</div> -->
+					<img src="./images/liveing.png">
+					<a href="#" class="btn" id="btn2"></a>
+				</div>
+
+				<div class="live-after temp hide">
+					<img src="./images/live-after.png">
+					<a href="#" class="btn" id="btn3"></a>
+				</div>
+
+			</div>
+		</div>
+		<div class="footer">
+			您所浏览的页面为腾讯公司广告客户在腾讯平台刊登之广告，所述产品非腾讯出品<br>
+	您默认同意您的昵称、头像等信息可出现在腾讯公司域名下的网页中，以便您和好友一同即时分享活动信息。
+		</div>
+	</div>
+
+	<div class="top-container">
+		<img class="logo" src="./images/logo.png" alt="logo">
+	</div>
+
+	<div class="float-layer"></div>
+	<div class="bc-box bc-box2" id="box2">
+		<span class="close"></span>
+		<input type="text" class="un" maxlength="6">
+		<input type="text" class="call" maxlength="11">
+		<a href="#" class="shijia"></a>
+		<a href="#" class="yuyue"></a>
+		<div class="agreebox" data-type="1">
+			<span></span>
+			<label for="vehicle" class="pointer">我已阅读并同意</label>
+			<a href="./agree.html" target="_blank">《隐私政策》</a>
+		</div>
+	</div>
+	<div class="bc-box bc-box1" id="box1">
+		<span class="close"></span>
+		<input type="text" class="un" maxlength="6">
+		<input type="text" class="call" maxlength="11">
+		<a href="#" class="shijia"></a>
+		<a href="#" class="yuyue"></a>
+		<div class="agreebox" data-type="1">
+			<span></span>
+			<label for="vehicle" class="pointer">我已阅读并同意</label>
+			<a href="./agree.html" target="_blank">《隐私政策》</a>
+		</div>
+	</div>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/dialog.js"></script>
+	<script src="./js/index.js"></script>
+	<script src="http://appmedia.qq.com/media/h5e/json2.js"></script>
+	<script src="http://imgcache.gtimg.cn/tencentvideo_v1/tvp/js/tvp.player_v2.js"></script>
+	<script src='http://appmedia.qq.com/media/h5e/h5e_v1.4.18.min.js'></script>
+	<script>
+		$(function(){
+			var inspect = {
+				mobile: function(v) {
+					var reg = /^1[3458]\d{9}$/;
+					if(!(reg.test(v))) return false;
+					return true;
+				},
+				email: function(v) {
+					var reg = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+					if(!(reg.test(v))) return false;
+					return true;
+				},
+				number: function (v) {
+					var reg = /^[\u4E00-\u9FA5]{2,6}$/;
+					if(!(reg.test(v))) return false;
+					return true;
+				}
+			};
+
+			// 重置
+			$('#box1 .shijia,#box2 .shijia').click(function() {
+				$('.bc-box .un').val('');
+				$('.bc-box .call').val('');
+				$(this).siblings('.agreebox').find('span').css('background-position', '0 0');
+			});
+
+			// 提交
+			$('#box1 .yuyue').click(function() {
+				var name = $('#box1 .un').val();
+				var phone = $('#box1 .call').val();
+
+				if (!inspect.number(name)) {
+					return alert('请输入正确的名字');
+				}
+
+				if ( $('#box1 .agreebox').attr('data-type')  == '0' ) {
+					return alert('请阅读隐私政策');
+				}
+				if (!inspect.mobile(phone)) {
+					return alert('请输入您的手机号码');
+				}
+
+				postData();
+			});
+			// 提交2
+			$('#box2 .yuyue').click(function() {
+				var name2 = $('#box2 .un').val();
+				var phone2 = $('#box2 .call').val();
+				if (!inspect.number(name2)) {
+					return alert('请输入正确的名字');
+				}
+
+				if ( $('#box2 .agreebox').attr('data-type')  == '0' ) {
+					return alert('请阅读隐私政策');
+				}
+				if (!inspect.mobile(phone2)) {
+					return alert('请输入您的手机号码');
+				}
+
+				postData2();
+			});
+
+			function postData() {
+				// $.ajax();
+				alert("您的预约信息提交成功");
+				$('.float-layer').fadeOut();
+				$('.bc-box').fadeOut();
+				$('.bc-box .un').val('');
+				$('.bc-box .call').val('');
+			}
+			function postData2() {
+				// $.ajax();
+				alert("您的预约信息提交成功");
+				$('.float-layer').fadeOut();
+				$('.bc-box2').fadeOut();
+				$('.bc-box2 .un').val('');
+				$('.bc-box2 .call').val('');
+			}
+
+			h5e.video.init({
+				modId: "player",
+				vid: "v0356ogtvgb",
+				width: $('.video-box').width(),
+				height: $('.video-box').height(),
+				type: "2",
+				flashWmode: 'transparent',
+				vodFlashSkin: 'http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf'
+			});
+
+			/*
+			//视频直播
+			var live_arr = {
+				// 直播前视频
+				liveBeforeVideo: {video_url: 's0022z6xtnz'},
+				// 直播中视频ID
+				liveVideo: {video_url: '100104700'},
+				// 直播结束后视频
+				liveAfterVideo: {video_url: 's0022z6xtnz'},
+			};
+
+			h5e.live.getStatus({
+				actId: '641011842', // 在直播管理后台添加活动的id
+				onBefore: function() { // 直播前回调
+					$('.main-wrap .temp-box .temp').hide();
+					$('.main-wrap .temp-box .live-before').show();
+
+					var live_player;
+
+					function playAgain() {
+						live_player = h5e.video.init({
+							modId: "player",
+							vid: live_arr.liveBeforeVideo.video_url,
+							width: videoWidth,
+							height: videoHeight,
+							flashWmode: 'transparent',
+							autoplay: true,
+							type: "2",
+							isVodFlashShowCfg: false,
+							vodFlashSkin: "http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf",
+							vodFlashExtVars: {
+								clientbar: 0,
+								showend: 0,
+								searchbar: 0,
+								share: 0,
+								follow: 0,
+								bullet: 1
+							},
+							// 循环播放调用
+							onallended: function() {
+								playAgain();
+							}
+						});
+					}
+					playAgain();
+				},
+				onLive: function() { //直播中回调
+					$('.main-wrap .temp-box .temp').hide();
+					$('.main-wrap .temp-box .liveing').show();
+
+					h5e.video.init({
+						modId: "player",
+						vid: live_arr.liveVideo.video_url,
+						width: videoWidth,
+						height: videoHeight,
+						flashWmode: 'transparent', //解决火狐视频层级
+						vodFlashSkin: "http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf",
+						type: "1"
+					});
+				},
+				onAfter: function() { //直播后回调
+					$('.main-wrap .temp-box .temp').hide();
+					$('.main-wrap .temp-box .live-after').show();
+
+					var live_player;
+
+					function playAgain() {
+						live_player = h5e.video.init({
+							modId: "player",
+							vid: live_arr.liveAfterVideo.video_url,
+							width: videoWidth,
+							height: videoHeight,
+							flashWmode: 'transparent',
+							autoplay: true,
+							type: "2",
+							isVodFlashShowCfg: false,
+							vodFlashSkin: "http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf",
+							vodFlashExtVars: {
+								clientbar: 0,
+								showend: 0,
+								searchbar: 0,
+								share: 0,
+								follow: 0,
+								bullet: 1
+							},
+							//循环播放调用
+							onallended: function() {
+								playAgain();
+							}
+						});
+					}
+					playAgain();
+				}
+			});
+			*/
+		});
+	</script>
+</body>
+</html>
+
+
+

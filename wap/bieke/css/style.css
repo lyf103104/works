@@ -1,0 +1,382 @@
+/* css reset */
+* {padding:0; margin:0; border:0; font-size:12px; list-style:none; text-decoration:none; font-family:'微软雅黑','黑体'; } img {display:block;} input:focus{box-shadow: none; outline:0 !important; }
+
+body{min-width: 1000px;}
+
+#player{
+	z-index: 1;
+}
+
+.top-container{
+	position: absolute;
+	top: 8px;
+	left: 1.7%;
+	width: 98%;
+}
+.logo{
+	width: 10.8333%;
+}
+.signup-contaner{
+	position: absolute;
+	top: 20px;
+	right: 28px;
+	cursor: pointer;
+}
+
+.main-container{
+	position: relative;
+	background-image: url(../images/bc.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center 0;
+}
+.main-wrap{
+	width: 1200px;
+	margin: auto;
+
+	position: absolute;
+}
+
+.main-wrap .video-box{
+	/*background-color: red;*/
+}
+
+.main-wrap .temp-box{
+	/*background: blue;*/
+	/*opacity: 0.3;*/
+	position: relative;
+	text-align: center;
+}
+
+.main-wrap .temp-box .temp img{
+	width: 390px;
+	float: right;
+}
+
+.main-wrap .temp-box .temp{
+	position: absolute;
+}
+
+.main-wrap .temp-box .temp .btn{
+	width: 175px;
+	height: 47px;
+	display: block;
+	background-image: url(../images/shijia.jpg);
+}
+.main-wrap .temp-box .live-before .btn{
+	background-image: url(../images/kaiqi.jpg);
+}
+.main-wrap .temp-box .temp .tit{
+	margin-bottom: 20px;
+	font-size: 35px;
+	font-weight: lighter;
+}
+
+.main-wrap .temp-box .live-after .tit{
+	line-height: 34px;
+	margin-bottom: 34px;
+	font-size: 24px;
+}
+
+.main-wrap .temp-box .live-after .tit span{
+	color: red;
+}
+
+.main-wrap .temp-box .temp .btn{
+	position: absolute;
+	top: 120px;
+	left: 0;
+}
+
+/*.main-wrap .temp-box .living .btn{
+	position: absolute;
+	top: 120px;
+	left: 25px;
+}*/
+
+.main-wrap .temp-box .temp .des{
+	margin-bottom: 10px;
+}
+
+.main-wrap .temp-box .temp .red{
+	
+	color: #b10000;
+}
+
+.main-wrap .temp-box .temp .des,
+.main-wrap .temp-box .temp .red{
+	font-size: 16px;
+}
+
+.footer-container{
+	width: 100%;
+	height: 50px;
+	line-height: 18px;
+}
+
+.footer{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 30px;
+	text-align: center;
+	color: #7b7b7b;
+	line-height: 16px;
+}
+
+.footer-wrap{
+	width: 1448px;
+	height: 100%;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.footer-wrap .open{
+	margin-top: 13px;
+}
+
+.footer-wrap .input-group{
+	height: 100%;
+	line-height: 50px;
+	color: #777777;
+}
+
+.footer-wrap .input-group label{
+	font-size: 14px;
+}
+
+.footer-wrap .input-group input{
+	margin-left: 10px;
+	border: 0;
+	border-radius: 0;
+	border-bottom: 1px solid #777777;
+	background: none;
+
+	color: #777;
+	font-size: 14px;
+}
+
+.footer-wrap .agree,
+.footer-wrap .agree a{
+	font-size: 14px;
+	color: #000;
+}
+
+.footer-wrap .agree .photo{
+	width: 12px;
+	height: 12px;
+	margin-right: 10px;
+
+	display: inline-block;
+	background-image: url(../images/footer-2.png);
+	background-position: 0 0;
+}
+
+.footer-wrap .agree a:hover{
+	text-decoration: underline;
+}
+
+.footer-wrap .btns{
+	height: 100%;
+	line-height: 50px;
+}
+
+.footer-wrap .btns .btn{
+	height: 28px;
+	line-height: 28px;
+	display: inline-block;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	border: 1px solid #a6a6a6;
+}
+
+.footer-wrap .btns .reset{
+	margin-right: 10px;
+}
+
+.footer-wrap .btns .submit{
+	margin-right: 10px;
+}
+
+.float-layer{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0;
+	left: 0;
+	background-color: #000;
+	opacity: .3;
+	filter:alpha(opacity=30);
+	z-index: 9998;
+	display: none;
+}
+
+.bc-box{
+	display: none;
+	width: 709px;
+	height: 434px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+.bc-box1{
+	background-image: url(../images/layer.jpg);
+}
+.bc-box2{
+	background-image: url(../images/layer2.jpg);
+}
+
+.bc-box .close{
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	cursor: pointer;
+}
+.bc-box .un,.bc-box .call{
+	width: 285px;
+    height: 40px;
+    position: absolute;
+    left: 258px;
+    font-size: 18px;
+    background: none;
+}
+.bc-box .un{
+    top: 150px;	
+}
+
+.bc-box .call{
+    top: 220px;
+}
+.bc-box2 .un{
+    top: 149px;
+}
+.bc-box2 .call{
+    top: 220px;
+}
+
+.bc-box2 .shijia, .bc-box2 .yuyue{
+	top: 343px;
+}
+.bc-box .shijia, .bc-box .yuyue{
+	width: 173px;
+    height: 45px;
+    position: absolute;
+    top: 341px;
+    cursor: pointer;
+}
+
+.bc-box .shijia{
+    left: 177px;
+}
+.bc-box .yuyue{
+    left: 362px;
+}
+.bc-box2 .shijia, .bc-box2 .yuyue{
+	top: 341px;
+}
+
+.bc-box .agreebox{
+	position: absolute;
+	top: 278px;
+	left:253px;
+	cursor: pointer;
+	
+}
+
+.bc-box .agreebox span{
+    float: left;
+    height: 21px;
+    width: 24px;
+    margin-top: 1px;
+    margin-right: 1px;
+	display: inline-block;
+	background-image: url(../images/god.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.bc-box .agreebox label{
+	font-size: 18px;
+}
+
+.bc-box .agreebox a{
+	font-size: 18px;
+	color: #000;
+}
+
+.bc-box .agreebox a:hover{
+	text-decoration: underline;
+}
+
+.bc-box1 .un, .bc-box1 .call{
+	left: 240px;
+    
+}
+
+.bc-box1 .un{
+	top: 127px;
+}
+
+.bc-box1 .call{
+	top:198px;
+}
+
+.bc-box1 .shijia, .bc-box1 .yuyue{
+	top: 319px;
+}
+
+.bc-box1 .shijia{
+	left: 159px;
+}
+
+.bc-box1 .yuyue{
+	left: 344px;
+}
+
+
+
+/*@media (max-width: 1448px) {
+	.footer-wrap{width: 100%;}
+}*/
+
+@media (max-width: 1180px) {
+	.main-wrap .temp-box .temp img{
+		width: 300px;
+		float: none;
+		margin: auto;
+	}
+	.main-wrap .temp-box .temp .btn {
+	    width: 120px;
+	    height: 32px;
+	    left: 0;
+	    background-size: 120px 32px;
+	}
+}
+/*
+@media (max-width: 1130px) {
+	.main-wrap .temp-box .temp .btn {
+	    width: 150px;
+	    height: 40px;
+	    background-size: 150px 40px;
+	}
+}
+*/
+
+@media (max-width: 1100px) {
+	.main-wrap .temp-box .temp img{
+		width: 300px;
+	}
+	.main-wrap .temp-box .temp .btn {
+	    width: 120px;
+	    height: 32px;
+	    left: 0;
+	    background-size: 120px 32px;
+	}
+}
+
+
+

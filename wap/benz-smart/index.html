@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no,email=no">
+	<title>奔驰 - Smart</title>
+	<link href="./css/swiper.min.css" rel="stylesheet"/>
+	<link href="./css/style.css" rel="stylesheet"/>
+	<script>
+		window.onresize = resize;
+		resize();
+		function resize() {(function(doc,win){var docEl=doc.documentElement,resizeEvt='orientationchange'in window?'orientationchange':'resize',recalc=function(){var clientWidth=docEl.clientWidth;if(!clientWidth)return;docEl.style.fontSize=100*(clientWidth/640)+'px'};if(!doc.addEventListener)return;win.addEventListener(resizeEvt,recalc,false);doc.addEventListener('DOMContentLoaded',recalc,false)})(document,window);}
+	</script>
+</head>
+
+<body>
+	<div class="pc">
+		<div class="bg1 relative"><div class="logo abs"></div></div>
+		<div class="bg2"></div>
+		<div class="bg3">
+			<div class="video_box">
+				<div id="mod_player"></div>
+			</div>
+		</div>
+		<div class="bg4">
+			<div class="cont relative">
+				<div class="small_icon icon1 abs"></div>
+				<div class="small_icon icon2 abs"></div>
+				<div class="small_icon icon3 abs"></div>
+				<div id="j_scroll_list2" class="scroll_box abs">
+					<a title="左翻" href="javascript:;" class="btn_left" data-click="1"></a>
+					<a title="右翻" href="javascript:;" class="btn_right" data-click="1"></a>
+					<div class="pic_list abs">
+						<ul id="ScrollImgBox2" class="clearfix">
+							<li data-click="0"><a href="javascript:;"><img src="./images/pc_scroll_1.jpg" /></a></li>
+							<li data-click="1"><a href="javascript:;"><img src="./images/pc_scroll_2.jpg" /></a></li>
+							<li data-click="2"><a href="javascript:;"><img src="./images/pc_scroll_3.jpg" /></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg5 relative">
+			<div class="cont">
+				<div class="formbox fr">
+					<div class="inputbox">
+						<input type="text" id="username" maxlength="6">
+					</div>
+					<div class="inputbox relative">
+						<div class="chenkbox chenkbox1 abs active" data-type="1"></div>
+						<div class="chenkbox chenkbox2 abs" data-type="2"></div>
+					</div>
+					<div class="inputbox">
+						<input type="text" id="phone" maxlength="11">
+					</div>
+					<div class="enter">
+						<div class="enter_shop fakeselect">
+							<p class="choice">请选择</p>
+							<ul id="yy_models" class="options">
+								<li>
+									<a href="javascript:;">车型1</a>
+								</li>
+								<li>
+									<a href="javascript:;">车型2</a>
+								</li>
+								<li>
+									<a href="javascript:;">车型3</a>
+								</li>
+							</ul>
+						</div>
+						<input type="hidden" name="" value="" id="j_models" autocomplete="off">
+					</div>
+					<div class="enter">
+						<div class="enter_shop fakeselect">
+							<p class="choice">请选择</p>
+							<ul id="yy_province" class="options"></ul>
+						</div>
+						<input type="hidden" name="" value="" id="j_pro" autocomplete="off">
+					</div>
+					<div class="enter">
+						<div class="enter_shop fakeselect">
+							<p class="choice">请选择</p>
+							<ul id="yy_city" class="options"></ul>
+						</div>
+						<input type="hidden" name="" value="" id="j_city" autocomplete="off">
+					</div>
+					<div class="enter">
+						<div class="enter_shop fakeselect">
+							<p class="choice">请选择</p>
+							<ul id="yy_address" class="options"></ul>
+						</div>
+						<input type="hidden" name="" value="" id="j_address" autocomplete="off">
+					</div>
+					<div class="btn_submit"></div>
+				</div>
+			</div>
+			<p class="footer center abs">
+				您所浏览的页面为腾讯公司广告客户在腾讯平台刊登之广告，所述产品非腾讯出品您默认同意您的昵称、
+				<br>头像等信息可出现在腾讯公司域名下的网页中，以便您和好友一同即时分享活动信息。
+			</p>
+		</div>
+	</div>
+	<div class="wap">
+		<div class="bg1"></div>
+		<div class="bg2"></div>
+		<div class="bg3">
+			<div class="video_box">
+				<div id="wap_player"></div>
+			</div>
+		</div>
+		<div class="bg4">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="./images/wap/wap_scroll_1.jpg"></div>
+			        <div class="swiper-slide"><img src="./images/wap/wap_scroll_2.jpg"></div>
+			        <div class="swiper-slide"><img src="./images/wap/wap_scroll_3.jpg"></div>
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>
+			    <!-- 如果需要导航按钮 -->
+			    <div id="arr_l" class="swiper-button-prev"></div>
+			    <div id="arr_r" class="swiper-button-next"></div>
+			</div>
+		</div>
+		<div class="bg5 relative">
+			<div class="formbox abs">
+				<div class="iptbox un_iptbox">
+					<input type="text" id="wap_un" maxlength="6">
+				</div>
+				<div class="iptbox relative">
+					<div data-type="1" class="wap_checkbox wap_checkbox1 abs active"></div>
+					<div data-type="2" class="wap_checkbox wap_checkbox2 abs"></div>
+				</div>
+				<div class="iptbox">
+					<input type="text" id="wap_phone" maxlength="11">
+				</div>
+				<div class="selectbox">
+					<select id="wap_models">
+						<option value="">请选择车型</option>
+						<option value="1">车型1</option>
+						<option value="2">车型2</option>
+						<option value="3">车型3</option>
+					</select>
+				</div>
+				<div class="selectbox">
+					<select id="wap_province">
+						<option value="">请选择省份</option>
+					</select>
+				</div>
+				<div class="selectbox">
+					<select id="wap_city">
+						<option value="">请选择城市</option>
+					</select>
+				</div>
+				<div class="selectbox addrs_selectbox">
+					<select id="wap_address">
+						<option value="">请选择经销商</option>
+					</select>
+				</div>
+				<div class="wap_submit"></div>
+			</div>
+		</div>
+	</div>
+	<script src="./js/jquery-1.11.3.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/shop.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="http://imgcache.gtimg.cn/tencentvideo_v1/tvp/js/tvp.player_v2.js"></script>
+</body>
+</html>

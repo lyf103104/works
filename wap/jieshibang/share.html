@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>杰士邦-SKYN-爱的传递</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body style="background:#000000">
+<div class="wrapBox">
+   <img src="images/share_bg01.jpg" />
+   <img src="images/share_bg02.jpg" />
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>
+window.onload=function(){
+	var h=window.innerHeight;
+	var w=window.innerWidth;
+	var wMain=h*640/1136;
+	var left=(w-wMain)/2;
+	$(".wrapBox").css({"height":h,"width":wMain,"left":left});
+}
+</script> 
+</body>
+</html>

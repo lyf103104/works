@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/****** Reset ******/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+img,fieldset {border:0;}
+ol,ul {list-style:none;}
+address,caption,cite,code,dfn,em,th,var {font-weight:normal;font-style:normal;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-weight:normal;font-size:100%;}
+q:before,q:after {content:'';}
+abbr,acronym {border:0;}
+
+/****** Common style ******/
+.clearfix {zoom:1;}
+.clearfix:after {content:".";display:block;clear:both;height:0;overflow:hidden;visibility:hidden;}
+.clear {clear:both;height:1px;margin-top:-1px;overflow:hidden;}
+.fl {float:left;}
+.fr {float:right;}
+.hide {display:none;}
+.show {display:block;}
+.oh {overflow:hidden;}
+.abs{position: absolute;}
+.relative{position: relative;}
+.pointer{cursor: pointer;}
+.text-right{text-align: right; }
+input.button,button {cursor:pointer;overflow:visible;/*Fix IE lt 8 bug*/}
+textarea {overflow:auto;/*Hide the scrollbar for IE*/}
+label[for] {cursor:pointer;}
+a {cursor:pointer;text-decoration:none;}
+a:hover,a:active {text-decoration:none;}
+a {color:#fff;}
+a:hover,a:active {color:#fff;}
+
+/****** Start ******/
+.main
+{
+    width: 100%;
+    min-height: 750px;
+
+    background: url(../images/bc.jpg) no-repeat top center;
+    background-color: #e54a07;
+}
+.main .content
+{
+    width: 1080px;
+    height: 750px;
+    margin: 0 auto;
+
+    background: url(../images/tfboys.png) no-repeat center;
+}
+.main .btn_go
+{
+    top: 225px;
+    left: 355px;
+
+    width: 71px;
+    height: 53px;
+
+    background: url(../images/go.png) no-repeat center;
+}
+.main .video_section
+{
+    z-index: 8;
+    top: 276px;
+    left: 117px;
+
+    width: 826px;
+    height: 411px;
+
+    background: url(../images/shadow.png);
+}
+.main .video_box
+{
+    top: 43px;
+    left: 42px;
+
+    width: 555px;
+    height: 323px;
+    background: #ee730b;
+}
+.main .video_box img
+{
+    /*z-index: -1;*/
+
+    display: block;
+
+    border: 0;
+}
+.main .video_list
+{
+    top: 43px;
+    right: 39px;
+
+    width: 183px;
+    height: 323px;
+}
+.main .video_list .item,
+.main .video_list img
+{
+    width: 100%;
+    height: 106px;
+}
+.main .video_list .item2
+{
+    margin: 2px 0;
+}
+.main .fenda_1
+{
+    right: 161px;
+    bottom: 0;
+
+    width: 72px;
+    height: 119px;
+
+    background: url(../images/fenda_1.png);
+}
+.main .fenda_2
+{
+    right: 0;
+    bottom: 0;
+
+    width: 161px;
+    height: 172px;
+
+    background: url(../images/fenda_2.png);
+}
+.main .qq_icon
+{
+    z-index: 10;
+    bottom: 47px;
+    left: 708px;
+
+    width: 214px;
+    height: 66px;
+
+    background: url(../images/icon_qq.png);
+}
+.main .btn_share
+{
+    z-index: 11;
+    bottom: 75px;
+    left: 160px;
+
+    width: 106px;
+    height: 19px;
+
+    background: url(../images/share.png);
+}
+.main .btn_share a
+{
+    display: block;
+    float: right;
+
+    width: 19px;
+    height: 19px;
+
+    opacity: 0;
+    background-color: red;
+
+    filter: alpha(opacity=0);
+}
+.main .footer
+{
+    font-family: '微软雅黑';
+    font-size: 12px;
+
+    z-index: 11;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #f6be90;
+}
+.main .text
+{
+    top: -164px;
+    right: 104px;
+
+    width: 287px;
+    height: 164px;
+
+    background: url(../images/text.png);
+}
+.main .text_go
+{
+    z-index: 13;
+    top: 285px;
+    left: 288px;
+
+    width: 300px;
+    height: 14px;
+
+    opacity: 0;
+    background-color: red;
+
+    filter: alpha(opacity=0);
+}
+.qrcode
+{
+    z-index: 10;
+    right: -20px;
+    bottom: 10px;
+
+    display: none;
+}
+
+

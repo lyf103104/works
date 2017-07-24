@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>芬达扭扭舞</title>
+	<link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="main">
+		<div class="content relative">
+			<a href="https://user.qzone.qq.com/1592305139" target="_blank" class=" btn_go abs"></a>
+			<a href="https://user.qzone.qq.com/1592305139" target="_blank" class="text_go abs"></a>
+			<div class="text abs"></div>
+			<div class="video_section abs">
+				<div class="video_box abs pointer">
+					<img class="abs" src="./images/video_img.png">
+					<div id="video_player"></div>
+				</div>
+				<div class="video_list abs">
+					<div data-vid="i001216370f" class="pointer item"><img src="./images/video1_curt.png"></div>
+					<div data-vid="i001216370f" class="pointer item item2"><img src="./images/video2.png"></div>
+					<div data-vid="i001216370f" class="pointer item"><img src="./images/video3.png"></div>
+				</div>
+			</div>
+			<div class="fenda_1 abs"></div>
+			<div class="fenda_2 abs"></div>
+			<a class="qq_icon abs" href="javascript:;"></a>
+			<img src="./images/qrcode.png" class="qrcode abs">
+			<div class="btn_share abs"><a href="javascript:Tshare.Qzone();"></a></div>
+			<div class="footer abs">
+				您所浏览的页面为腾讯公司广告客户在腾讯平台刊登之广告，所述产品非腾讯出品。<br />
+				您默认同意您的昵称、头像等信息可出现在腾讯公司域名下的网页中，以便您和好友一同即时分享活动信息。
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-1.11.3.min.js" ></script>
+	<script src="js/jquery.easing.js" ></script>
+	<script src="js/share.js" ></script>
+	<script src="js/common.js" ></script>
+	<script src="http://appmedia.qq.com/media/h5e/json2.js"></script>
+	<script src="http://imgcache.gtimg.cn/tencentvideo_v1/tvp/js/tvp.player_v2.js"></script>
+	<script src='http://appmedia.qq.com/media/h5e/h5e_v1.4.18.min.js'></script>
+	<script>
+		browserRedirect();
+		/*根据移动设备跳转到移动页面wap/index.html*/
+		function browserRedirect() {
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+			var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+			var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+			var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+			var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+			var bIsAndroid = sUserAgent.match(/android/i) == "android";
+			var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+			var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+			if ((bIsIphoneOs || bIsIpad || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsCE || bIsWM) && window.location.href.indexOf("/wap/") < 0) {
+				var gotoURL = "pc/wap/";
+				if (location.href.indexOf('?') < 0) {
+					window.location.href = "http://192.168.1.142:8080/" + gotoURL + "index.html";
+				} else {
+					window.location.href = "http://192.168.1.142:8080/" + gotoURL + "index.html" + location.href.substr(location.href.indexOf('?'));
+				}
+			}
+		}
+	</script>
+</body>
+</html>

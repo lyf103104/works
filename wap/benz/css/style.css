@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+/****** Reset ******/
+section,article,aside,header,footer,nav,dialog,figure,legend{display:block;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,figure{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;empty-cells:show; table-layout:fixed;}
+table td{word-break:break-all;}
+caption,th{text-align:left;}
+ol,ul{list-style:none;}
+img{display:block;border:0;vertical-align:middle;max-width:100%;height:auto;width:auto\9;/* ie8 */}
+*:focus{outline:0;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;-webkit-box-sizing:border-box;box-sizing:border-box}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
+audio:not([controls]){display:none;}[hidden]{display:none;}
+
+/****** Typography ******/
+html,body{max-width:640px;height:100%;}
+html{font-size:100px;outline:0;}
+body{color:#767676;background:#fff;-webkit-user-select:none;-webkit-text-size-adjust:none;position:relative;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+
+/*::-moz-placeholder { color: #00549c; }
+::-webkit-input-placeholder { color:#00549c; }
+:-ms-input-placeholder { color:#00549c; }*/
+
+/****** public ******/
+.relative{position: relative;}
+.abs{position: absolute;}
+.hide{display: none;}
+.fl{float: left;}
+.fr{float: right;}
+.oh{overflow: hidden;}
+
+/****** Start ******/
+.bc_1{ background-image: url(../images/bc_1.jpg); }
+.bc_2{ background-image: url(../images/bc_2.jpg); }
+.bc_3{ background-image: url(../images/bc_3.jpg); }
+.bc_4{ background-image: url(../images/bc_4.jpg); }
+.bc_5{ background-image: url(../images/bc_5.jpg); }
+.arr_down
+{
+    bottom: .85rem;
+    left: 50%;
+
+    width: .33rem;
+    height: .21rem;
+    margin-left: -.17rem;
+
+    background-image: url(../images/arr_down.png);
+    background-size: cover;
+}
+
+.bc_1,
+.bc_2,
+.bc_3,
+.bc_4,
+.bc_5
+{
+    width: 100%;
+    height: 10.11rem;
+    background-size: cover;
+}
+.bc_1 .btns_benz
+{
+    left: .5rem;
+    top: 2.59rem;
+}
+.bc_1 .btns_benz a
+{
+    float: left;
+
+    width: 1.74rem;
+    height: .53rem;
+
+    background-size: cover;
+}
+.bc_1 .btns_benz .btn_1
+{
+    margin-right: .08rem;
+    background-image: url(../images/btn_1.jpg);
+}
+.bc_1 .btns_benz .btn_2
+{
+    background-image: url(../images/btn_2.jpg);
+}
+.bc_1 .poster
+{
+    z-index: 9;
+    right: 1.84rem;
+    bottom: 1.28rem;
+
+    width: 1.33rem;
+    height: 1.47rem;
+
+    background-image: url(../images/poster.png);
+    background-size: cover;
+}
+.bc_1 .rotate,
+.bc_1 .rotate .ring
+{
+    width: 1.81rem;
+    height: 1.81rem;
+}
+.bc_1 .rotate
+{
+    z-index: 8;
+    bottom: 1.18rem;
+    left: 1.84rem;
+}
+.bc_1 .rotate .ring
+{
+    background-image: url(../images/btn3_ring.png);
+    background-size: cover;
+}
+.bc_1 .rotate .btn_3
+{
+    width: 1.56rem;
+    height: 1.56rem;
+    left: .13rem;
+    top: .13rem;
+
+    background-image: url(../images/btn_3.png);
+    background-size: cover;
+}
+.bc_2 .formbox
+{
+    top: 2.52rem;
+    right: .7rem;
+
+    width: 3.88rem;
+}
+.bc_2 .formbox .input_div,
+.bc_2 .formbox .input_div input,
+.bc_2 .formbox .select_div,
+.bc_2 .formbox .select_div select
+{
+    height: .4rem;
+    line-height: .4rem;
+}
+.bc_2 .formbox .input_div,
+.bc_2 .formbox .select_div
+{
+    width: 100%;
+    margin-bottom: .14rem;
+}
+.bc_2 .formbox input,
+.bc_2 .formbox select
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    width: 100%;
+    margin: 0;
+    padding: 0 .433rem 0 .16rem;
+
+    vertical-align: text-top;
+
+    color: #989898;
+    border: none;
+    outline: none;
+    background: none;
+
+       -moz-appearance: none;
+    -webkit-appearance: none;
+            appearance: none;
+    font-size: .18rem;
+}
+.bc_2 .formbox .btn_4
+{
+    bottom: -0.6rem;
+    right: 0;
+
+    width: 2.45rem;
+    height: .53rem;
+
+    background-image: url(../images/btn_4.jpg);
+    background-size: cover;
+}
+.bc_2 .car_program
+{
+    bottom: 1.16rem;
+    left: 50%;
+
+    width: 2.02rem;
+    height: 1.1rem;
+    margin-left: -1.01rem;
+
+    background-image: url(../images/program.png);
+    background-size: cover;
+}
+.bc_2 .car_program .des
+{
+    bottom: 0;
+    left: 0;
+
+    width: 2.02rem;
+    height: .35rem;
+
+    opacity: 0;
+    background: red;
+}
+.bc_4 .player_box
+{
+    top: 3.05rem;
+    left: 50%;
+
+    width: 6.34rem;
+    height: 4rem;
+    margin-left: -3.17rem;
+}
+.bc_4 .player_box .video_img
+{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/video_img.jpg);
+    background-size: cover;
+}
+.bc_5 .winning_list
+{
+    font-family: '宋体';
+
+    top: 6.5rem;
+    left: 50%;
+
+    width: 6.34rem;
+    height: 1.2rem;
+    margin-left: -3.17rem;
+    padding-top: .25rem;
+    padding-left: .2rem;
+
+    color: #ffea00;
+}
+.bc_5 .winning_list .title
+{
+    font-size: .24rem;
+}
+.bc_5 .winning_list .callbox
+{
+    line-height: 0;
+
+    height: .16rem;
+    margin-bottom: .08rem;
+}
+.bc_5 .winning_list .callbox span
+{
+    font-size: .16rem;
+
+    vertical-align: middle;
+}
+
+

@@ -1,0 +1,235 @@
+@charset "utf-8";
+/*
+	@title:杰士邦
+	@author:1291982751
+	@date:2015-9-18
+*/
+*:focus{ outline:none;}
+*{-webkit-tap-highlight-color: transparent;}
+body,h1,h2,h3,h4,h5,h6,ul,li,ol,div,dl,dt,dd,p,img,a,form{ margin:0; padding:0; color:#000; font-size:12px; font-family:"微软雅黑";} div{ width:auto}
+body{font-size:12px;-webkit-text-size-adjust:none; background:#080808;}dl,dd,dt{overflow:hidden; font-family:Arial;}
+img{vertical-align:middle; border:0 none; width:100%;}li{list-style:none; list-style-position:outside;}lable{ cursor:pointer}
+a{color:#939598; text-decoration:none; overflow:hidden;opacity:1; outline:none;}a:hover{ color:#000; text-decoration:none;}
+ul{list-style:none;}input{vertical-align:middle; padding:0; margin:0;}textarea{font-size:12px;}
+
+
+
+/*首页*/
+.wrapCon{ width:100%; height:100%; max-width:640px; margin:0 auto; position:relative;  overflow:hidden;}
+.wrapBox{ width:100%; height:100%; position:absolute; top:0; }
+.rulebg{ width:100%; height:100%; position:absolute; left:0; top:0; z-index:9; display:none;}
+.indexMain{ width:100%; height:auto; position:absolute; left:0; bottom:0;}
+.startBtn{ display:block; width:26.5625%; height:47%; position:absolute; top:13.5%; left:36.71875%; text-indent:-9999px;}
+.ruleBtn{ display:block; width:28.4375%; height:10.48%; position:absolute; top:80.63%; left:35.9375%; text-indent:-9999px;}
+
+.rule{ width:100%; height:68.926%; position:absolute; left:0; top:100%; background:#080808; z-index:10;}
+.rule h1{ width:82.8125%; height:auto; padding-left:9.375%;}
+.ruleCon{ width:82.8125%; height:61%; padding-left:9.375%; overflow:auto;}
+.ruleCon p{ width:91.51%; height:auto; color:#c69956; font-size:22px; line-height:45px;}
+.ruleCon p img{ width:5%;}
+.rule a.okBtn{ display:block; width:42.5%; height:auto; margin:5% 0 0 28.9%;}
+
+/*提交页面*/
+.main{ width:90.9375%; height:88%; position:absolute; top:5.28%; left:4.6875%;}
+.main .insideRuleBtn{ display:block; width:26%; height:auto; margin-left:6%;float: left;}
+.main .canvas{ width:100%; height:62.7%;  position:relative;}
+.canvas a{ width:8.56%; height:auto; position:absolute; left:-3.5%; top:43.01%; -webkit-animation:shine 1.2s  ease infinite; animation:shine 1.2  ease infinite;}
+.canvas a.rightBtn{ right:-0.5%; left:auto;}
+#starCanvas{ height:100%; width:87.11%; margin-left:5.155%;}
+.canvas .file{ width:15.12%; height:15.5%; background:url(../images/uploadBtn.png) no-repeat left top;  background-size:100%; position:absolute; left:42.268%; top:81.73%;}
+.canvas .file input{ width:100%; height:100%; opacity:0;}
+
+.main .p_input{ width:88.49%; height:21%; margin-left:5.84%; }
+.p_input p{ width:100%; height:50%; color:#c69956; font-size:20px; line-height:38px; white-space:nowrap; }
+.p_input p input{ width:61.94%;  color:#c69956; border:none; background:url(../images/inputbg.png) no-repeat left 65%; background-size:100%;}
+.main a.okBtn{ display:block; width:42.5%; height:auto; margin-left:28.9%;}
+
+.tc_accept{ width:80.46875%; height:auto; position:absolute; display:none;}
+.tc_accept a{ display:block; width:52%; height:20%; position:absolute; left:24%; top:70%; text-indent:-9999px;}
+
+/*显示图片*/
+.showMain{ width:85.9375%; height:94%; position:absolute; left:9.375%; top:5.28%;}
+.showMain .insideRuleBtn{ margin-left:74%;}
+.showMain .name{ width:93.64%; text-align:center; font-size:24px; padding-bottom:2%; color:#c69956;}
+.showMain .pic{ width:93.64%; height:59%; border-radius:3.5%; overflow:hidden;}
+.showMain .num{ width:93.64%; text-align:center; font-size:24px; padding:3% 0; color:#c69956;}
+.showMain .num img{ width:5.825%;}
+.showMain .challengeBtn{ display:block; width:53.398%; height:auto; margin-left:23.689%;}
+
+.pinglunCon{width:93.64%; height:9.5%; margin-top:3%;}
+.pinglunCon p{ width:85%; color:#dcba7b; font-size:18px; line-height:29px;}
+
+.pinglun { width:93.64%; height:6.5%; overflow:hidden; margin-top:2%;}
+.pinglun input{ float:left; padding-bottom:30%; width:78.5%; border:none; border-radius:0; background:#616161; color:#b8b8b8; font-size:18px; line-height:50%;}
+.pinglun a{ float:right; height:100%; width:20.5%; background:url(../images/sendBtn.jpg) no-repeat left top; background-size:100% 100%;}
+
+.share{ width:100%; height:100%; position:absolute; left:0; top:0; z-index:9; display:none;}
+
+/*客人态*/
+.showMain .otherPic{ height:62%;}
+.otherBtn{ width:100%; height:7%; margin:5% 0;}
+.otherBtn a{ float:left; width:30.364%; height:auto; margin-left:1.5%; padding:1% 0;}
+.otherBtn a:nth-child(1){ position:relative;}
+.otherBtn a:nth-child(1) span{ position:absolute; right:6%; top:0; display:block; width:67%; height:100%; text-align:center; line-height:210%; font-size:24px;color:#c69956;}
+
+/*挑战*/
+.challengemain{ height:94%;}
+.challenge{ width:100%; height:54.28%; overflow:hidden; margin-top:6%; background:url(../images/pk.png) no-repeat left top; background-size:100%;}
+.leftCon{ width:47.414%; height:90.25%; float:left;}
+.rightCon{ width:47.414%; height:90.25%; float:right;}
+.challenge .name{ width:100%; text-align:center; font-size:24px; padding:10% 20%; color:#c69956; width:60%; text-align:center; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.challenge .pic{ width:100%; height:71.5%; border-radius:3%; overflow:hidden;}
+.challenge .num{ width:100%; text-align:center; font-size:20px; padding:7% 0 8% 0; color:#c69956;}
+.challenge .num img{ width:9.09%;}
+.challenge a{ display:block; width:60%; margin-left:20%; position:relative;}
+.challenge a span{ position:absolute; right:6%; top:0; display:block; width:67%; height:100%; text-align:center; line-height:190%; font-size:24px;color:#c69956;}
+.challengemain .challengeBtn{ display:block; width:46.897%; height:auto; margin:4.5% 0 10.5% 26.724%;}
+.challengemain  .callother{ display:block; width:46.897%; height:auto; margin-left:26.724%;}
+.challengemain .pinglunCon{ width:88.79%; margin-left:5.17%;}
+.challengemain .pinglun{ width:88.79%; margin-left:5.17%;}
+
+/*兑奖页面*/
+.prizeCode{ width:45.625%; height:6.162%; text-align:center; font-size:34px; line-height:200%;  color:#c69956; background:url(../images/code_bg.png) no-repeat left top; background-size:100% 100%; position:absolute; top:47.83%; left:27.1875%; margin:0 auto;}
+.twoCode{ width:26.5625%; height:auto; position:absolute; left:36.71875%; top:77.465%;}
+
+/*未通过页面*/
+.enterBtn{ width:42.5%; height:auto; position:absolute; left:28.75%; top:75%;}
+@media only screen and (max-width:639px){
+	.ruleCon p{ font-size:17px; line-height:34px;}
+	.p_input p{ font-size:16px; line-height:34px;}
+	.showMain .name,.otherBtn a:nth-child(1) span,.showMain .num,.challenge .name,.challenge a span{ font-size:20px;}
+	.challenge .num{ font-size:16px;}
+	.pinglunCon p{ font-size:16px; line-height:26px;}
+	.pinglun input{ font-size:16px;}
+	.prizeCode{ font-size:28px;}
+	}
+
+
+@media only screen and (max-width:479px){
+	.ruleCon p{ font-size:14px; line-height:26px;}
+	.p_input p{ font-size:14px; line-height:30px;}
+	.showMain .name,.otherBtn a:nth-child(1) span,.showMain .num,.challenge .name,.challenge a span{ font-size:18px;}
+	.challenge .num{ font-size:14px;}
+	.pinglunCon p{ font-size:14px; line-height:18px;}
+	.pinglun input{ font-size:14px;}
+	.prizeCode{ font-size:22px;}
+	}
+
+@media only screen and (max-width:413){
+	.ruleCon p{ font-size:12px; line-height:24px;}
+	.p_input p{ font-size:12px; line-height:24px;}
+	.showMain .name,.otherBtn a:nth-child(1) span,.showMain .num,.challenge .name,.challenge .num,.challenge a span{ font-size:16px;}
+	.challenge .num{ font-size:12px;}
+	.pinglunCon p{ font-size:12px; line-height:16px;}
+	.pinglun input{ font-size:12px;}
+	.prizeCode{ font-size:16px;}
+	}
+
+
+@media only screen and (max-width:377px){
+	.p_input p{ font-size:11px; line-height:24px;}
+	.showMain .name,.otherBtn a:nth-child(1) span,.showMain .num,.challenge .name,.challenge .num,.challenge a span{ font-size:16px;}
+	.challenge .num{ font-size:12px;}
+	.pinglunCon p{ font-size:11px; line-height:16px;}
+	.pinglun input{ font-size:12px;}
+	.prizeCode{ font-size:16px;}
+	}
+
+@media only screen and (max-width:359px){
+	.ruleCon p{ font-size:11px; line-height:20px;}
+	.p_input p{ font-size:9px; line-height:24px;}
+	.showMain .name,.otherBtn a:nth-child(1) span,.showMain .num,.challenge .name,.challenge .num,.challenge a span{ font-size:14px;}
+	.pinglunCon p{font-size:11px; line-height:14px;}
+	.prizeCode{ font-size:14px;}
+	}
+
+
+@-webkit-keyframes shine {
+	0% { opacity: 0;}
+	30% { opacity:.3;}
+    60% { opacity: 1;}
+    100% { opacity: 0;}
+}
+
+@keyframes shine{
+    0%{ opacity: 0;}
+	30% { opacity: .3;}
+    60% { opacity: 1; }
+    100% { opacity: 0;}
+}
+
+.beautifyOpen
+{
+    font-size: 12px;
+    line-height: 1.2rem;
+
+    display: block;
+    float: right;
+
+    width: 3rem;
+    margin-right: 8%;
+    padding: 0 10px;
+
+    color: #c69956;
+    border: 1px solid #c69956;
+    border-radius: 12px;
+}
+.beautifyBox
+{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+.zindex
+{
+    z-index: -1;
+}
+.beautifyBox .wrap
+{
+    /*margin-top: -40vh;*/
+    position: absolute;
+    bottom: -34vh;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 30vh;
+    padding: 2vh 0;
+
+    -webkit-transition: all .6s; /* Safari and Chrome */
+       -moz-transition: all .6s; /* Firefox 4 */
+         -o-transition: all .6s; /* Opera */
+            transition: all .6s;
+    text-align: center;
+
+    background-color: rgba(0,0,0,.8);
+}
+.beautifyBox .slidedown
+{
+    bottom: 0;
+}
+.beautifyBox .wrap .item
+{
+    line-height: 1.5rem;
+
+    display: inline-block;
+
+    width: 23%;
+    height: 1.5rem;
+    margin: .5rem;
+
+    text-align: center;
+
+    color: #c69956;
+    border: 1px solid #c69956;
+    border-radius: 12px;
+}
+.beautifyBox .wrap .item.active
+{
+    color: #fff;
+    background-color: #c69956;
+}

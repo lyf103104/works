@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta charset="UTF-8" />
+	<title>日产逍客</title>
+	<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="content module_3">
+	<div class="main showmain " >  
+		<div class="waterfall_content">
+			<div class="show">
+				<div class="waterfall_container" id="waterfall_container">
+			
+				</div>
+				<div class="waterfall_loading">正在加载...</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-1.11.3.min.js" ></script>
+	<script src="js/waterfall.js" ></script>
+	<script>
+		$(function() {loadData()});
+		
+		var _isdataNull = false;
+
+		// 加载瀑布流
+		function loadData() {
+			//初次执行，默认拉取第一页数据
+			$('#waterfall_container').append(loadHtmlData(1));
+			$('#waterfall_container').waterfall({
+				auto_imgHeight: true,
+				getResource: function(pageIndex, render) {
+					return loadHtmlData(pageIndex);
+				}
+			});
+		}
+
+		// 拉取数据
+		function loadHtmlData(pageIndex) {
+			if (pageIndex >= 30) {
+				_isdataNull = true;
+				$('.waterfall_loading').html('没有数据!');
+				return "";
+			}
+
+			var _strHtml = '';
+			
+			for (var i = 0; i < 30; i++) {
+				var src = './images/waterfall/' + (i % 3 + 1) + '.jpg';
+
+				_strHtml += '<div class="base_area">' +
+								'<div class="pic_show">' +
+									'<a href="javascript:;"><img src="' + src + '" /></a>' +
+								'</div>' +
+								'<div class="info oh">' +
+									'<div class="l_title fl">' +
+										'<img src="./images/avatar.jpg" />' +
+										'<span>左手侧影</span>' +
+									'</div>' +
+									'<div class="r_title fr">' +
+										'<img class="pointer" src="./images/heart_n.png" />' +
+										'<span>1723234</span>' +
+									'</div>' +
+								'</div>' +
+							'</div>';
+			}
+
+			return _strHtml;
+		}
+
+		$(window).bind('scroll', function() {
+			if (!_isdataNull) $.onScroll();
+		});
+
+		var timer = setInterval(function() {
+			insertUploadImg();
+		}, 100);
+
+		function insertUploadImg() {
+			var $el = $('#waterfall_container .item0');
+
+			if ($el.length > 0) {
+				$el.prepend('<div style="width: 225px;height:225px;;margin-top:5px;"></div>');
+				clearInterval(timer);
+			}
+		}
+	</script>
+</body>
+</html>
